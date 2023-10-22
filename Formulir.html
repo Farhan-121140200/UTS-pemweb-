@@ -1,0 +1,63 @@
+<!-- Farhan Rizky Gunawan-->
+<!-- 121140200-->
+<!-- UTS Pemweb RB -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style form.css">
+    <title>Halaman Formulir</title>
+</head>
+<body>
+    <header>
+        <h1>Website Pendataan Mahasiswa</h1>
+        <img src="pngegg (20).png" alt="Logo Website" class="gambar">
+    </header>
+    <div class="content">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Halaman Utama</a></li>
+                    <li><a href="Tabel.html">Tabel</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <h2>Formulir Pendataan</h2>
+            <form action="submit.php" method="get" id="registration-form">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required>
+
+                <label for="prodi">Program Studi:</label>
+                <input type="text" id="prodi" name="prodi" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="jenis-kelamin">Jenis Kelamin:</label>
+                <select id="jenis-kelamin" name="jenis-kelamin" required>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+
+                <label for="tanggal-lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Hak Cipta 2023</p>
+    </footer>
+</body>
+</html>

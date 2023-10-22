@@ -1,0 +1,127 @@
+<!-- Farhan Rizky Gunawan-->
+<!-- 121140200-->
+<!-- UTS Pemweb RB -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Halaman Tabel</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("registration-form");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Menghentikan perilaku default pengiriman form
+
+                const formData = new FormData(form);
+                const queryString = new URLSearchParams(formData).toString();
+
+                // Mengirim data ke submit.php menggunakan XMLHttpRequest
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", `submit.php?${queryString}`, true);
+
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Menangani respons dari submit.php jika diperlukan
+                        // Misalnya, menampilkan pesan sukses atau melakukan redirect.
+                        alert("Data berhasil dikirim!");
+                    }
+                };
+
+                xhr.send();
+            });
+        });
+    </script>
+    <header>
+        <h1>Website Pendataan Mahasiswa</h1>
+        <img src="pngegg (10).png" alt="Logo Website" class="gambar">
+    </header>
+    <div class="content">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Halaman Utama</a></li>
+                    <li><a href="Formulir.html">Form</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <h2>Data Mahasiswa</h2>
+            <table class="mahasiswa-table">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Program Studi</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Alamat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asep Handoko</td>
+                        <td>121140256</td>
+                        <td>Teknik Informatika</td>
+                        <td>asep.121140256@student.itera.ac.id</td>
+                        <td>********</td>
+                        <td>Laki-laki</td>
+                        <td>2002-01-15</td>
+                        <td>Jl. Mangga 1</td>
+                    </tr>
+                    <tr>
+                        <td>Budiono Siregar</td>
+                        <td>121140257</td>
+                        <td>Teknik Informatika</td>
+                        <td>budi.121140257@student.itera.ac.id</td>
+                        <td>********</td>
+                        <td>Laki-laki</td>
+                        <td>2003-01-15</td>
+                        <td>Jl. Mangga 1</td>
+                    </tr>
+                    <tr>
+                        <td>Dede Septian</td>
+                        <td>121140258</td>
+                        <td>Teknik Informatika</td>
+                        <td>dede.121140258@student.itera.ac.id</td>
+                        <td>********</td>
+                        <td>Laki-laki</td>
+                        <td>2002-01-15</td>
+                        <td>Jl. Mangga 1</td>
+                    </tr>
+                    <tr>
+                        <td>Gilang</td>
+                        <td>121140259</td>
+                        <td>Teknik Informatika</td>
+                        <td>gilang.121140259@student.itera.ac.id</td>
+                        <td>********</td>
+                        <td>Laki-laki</td>
+                        <td>2001-07-15</td>
+                        <td>Jl. Mangga 1</td>
+                    </tr>
+                    <tr>
+                        <td>Elan Waker</td>
+                        <td>121140260</td>
+                        <td>Teknik Informatika</td>
+                        <td>elan.121140260@student.itera.ac.id</td>
+                        <td>********</td>
+                        <td>Laki-laki</td>
+                        <td>2003-04-15</td>
+                        <td>Jl. Mangga 1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Hak Cipta 2023</p>
+    </footer>
+</body>
+</html>
+
